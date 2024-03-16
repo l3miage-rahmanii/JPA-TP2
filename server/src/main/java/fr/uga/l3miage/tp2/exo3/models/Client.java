@@ -12,6 +12,9 @@ public class Client {
 
     private String email;
 
-    @OneToMany
+    @OneToOne
+    private Adresse adresse;
+
+    @OneToMany(mappedBy = "client")
     private Set<Commande> commandes;
 }

@@ -10,6 +10,6 @@ public class CategorieDeProduit {
 
     private String nom;
 
-    @OneToMany(mappedBy = "categorie")
+    @ManyToMany(mappedBy = "categories")
     private Set<Produit> produits;
 }

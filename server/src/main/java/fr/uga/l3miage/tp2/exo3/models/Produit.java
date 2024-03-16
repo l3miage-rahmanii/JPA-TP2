@@ -1,6 +1,7 @@
 package fr.uga.l3miage.tp2.exo3.models;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Produit {
@@ -15,6 +16,8 @@ public class Produit {
     private int quantite;
 
     @ManyToOne
-    private CategorieDeProduit categorieDeProduit;
+    private Commande commande;
+    @ManyToMany
+    private Set<CategorieDeProduit> categories;
 
 }
