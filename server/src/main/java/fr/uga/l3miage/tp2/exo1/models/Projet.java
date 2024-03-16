@@ -7,16 +7,13 @@ import java.util.*;
 public class Projet {
 
     @Id
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
     private String description;
 
     @ManyToMany
-    private Set<DeveloperMiage> developerMiage;
+    private Set<DeveloperMiage> developerMiages;
 
 }

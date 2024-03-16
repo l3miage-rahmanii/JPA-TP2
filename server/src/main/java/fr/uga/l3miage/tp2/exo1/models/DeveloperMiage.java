@@ -4,20 +4,17 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Table(name = "developer_miage")
+@Table
 public class DeveloperMiage {
 
     @Id
-    @Column(name = "lastname")
     private String lastname;
 
-    @Column(name = "firstname")
     private String firstname;
 
-    @Column(name = "email")
     private String email;
 
-    @ManyToMany
-    private ArrayList<Projet> projets;
+    @ManyToMany(mappedBy = "developerMiages")
+    private Set<Projet> projets;
 
 }
