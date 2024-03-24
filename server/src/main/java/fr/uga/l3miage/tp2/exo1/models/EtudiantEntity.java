@@ -5,7 +5,7 @@ import java.util.*;
 
 @Entity
 @Table(name = "etudiant")
-public class Etudiant {
+public class EtudiantEntity {
 
     @Id
     private Long agalan;
@@ -14,7 +14,7 @@ public class Etudiant {
 
     private String email;
 
-    @ManyToMany(mappedBy = "etudiants")
-    private Set<ClubSportif> ClubSportifs;
+    @ManyToMany(mappedBy = "etudiant")
+    private Set<ClubSportifEntity> clubs;
 
 }

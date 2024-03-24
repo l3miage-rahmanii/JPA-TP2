@@ -5,16 +5,19 @@ import java.util.*;
 
 @Entity
 @Table
-public class DeveloperMiage {
+public class DeveloperMiageEntity {
 
     @Id
+    @Column
     private String lastname;
 
+    @Column
     private String firstname;
 
+    @Column
     private String email;
 
-    @ManyToMany(mappedBy = "developerMiages")
-    private Set<Projet> projets;
+    @ManyToMany
+    private Set<ProjetEntity> projets;
 
 }
